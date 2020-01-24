@@ -12,13 +12,31 @@ angular.module('urlalias.controllers').controller('urls', ['$scope', '$window', 
         $http.post(APP_URL + '/shortenurl', { data: longurl }).then(function(response) {
             console.log('shortened url==>', response);
             $scope.url = {
-                originalLink: null,
-                shortenedLink: null
+                shortenedLink: 'http://localhost:3000/#!/' + response.data.shortenedLink
             }
-        },function(error){
+        }, function(error) {
             console.log(error)
         })
     }
+
+    $scope.url = {
+        shortenedLink: 'http://localhost:3000/#!/longurl?code=' + 'GAMTKR1' //response.data.shortenedLink
+    }
+    console.log('sssssss', $state)
+    //$scope.getOriginalUrl = function() {
+        if ($state.params.code !== undefined) {
+            $http.get(APP_URL + '/longurl', { code: $state.params.code }).then(function(response) {
+                console.log('longurl ==>', response);
+                $scope.url = {
+                    originalLink: response.data.originalLink
+                }
+            }, function(error) {
+                console.log(error)
+            })
+        }
+    //}
+    // getOriginalUrl()
+
 }])
 
 

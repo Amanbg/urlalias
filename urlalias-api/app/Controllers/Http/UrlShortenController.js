@@ -3,6 +3,8 @@
 const Urlshorten = use('App/Models/Urlshorten')
 const crypto = require('crypto');
 
+const Database = use('Database')
+
 class UrlShortenController {
 
   async urlShorten(longURL, startIndex, endIndex) {
@@ -16,7 +18,13 @@ class UrlShortenController {
     urlshorten.shortenedlink = await this.urlShorten(urlshorten.originallink, 0, 6);
     await urlshorten.save();
 
-    return { shortenedurl: urlshorten.toJSON() };
+    return urlshorten.toJSON();
+  }
+
+  async original({request, response}) {
+  	console.log('request.query===>', request.get())
+  	const originallink = await Database.from('urlshortens').where('shortenedlink', request.params.code)
+  	return originallink;
   }
 }
 

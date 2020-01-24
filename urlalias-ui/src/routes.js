@@ -10,4 +10,14 @@ angular.module('urlalias').config(['$stateProvider', '$urlRouterProvider', '$loc
                 }
             }
         })
+
+    $stateProvider
+        .state("home1", {
+            url: '/longurl/:code',
+            views: {
+                "mainContent": {
+                    'templateUrl': "src/views/home.html"
+                }
+            }
+        })
 }])
