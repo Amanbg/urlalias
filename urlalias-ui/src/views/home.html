@@ -5,7 +5,7 @@
                 <input type="text" class="input-link form-control" auto-complete="off" name="originallink" placeholder="Your link" ng-model="url.originalLink">
             </div>
             <div class="col-md-2 form-group" style="float: right; margin-right: 10%">
-                <button type="button" class="btn btn-primary btn-block shorten-btn" ng-click="shortenUrl()" name="shortenbutton">Shorten URL</button>
+                <button type="submit" class="btn btn-primary btn-block shorten-btn" ng-click="shortenUrl(url.originalLink)" name="shortenbutton">Shorten URL</button>
             </div>
         </div>
     </div>
