@@ -1,5 +1,4 @@
 angular.module('urlalias.controllers').controller('urls', ['$scope', '$window', '$filter', '$state', '$timeout', '$rootScope', '$http', function($scope, toaster, $window, $filter, $state, $timeout, $rootScope, $http) {
-    $scope.user = {}
 
     //const APP_URL = 'http://localhost:3333'
 
@@ -10,7 +9,10 @@ angular.module('urlalias.controllers').controller('urls', ['$scope', '$window', 
     //         initLoad();
     //     })
     // }
-    $scope.user.text = "Welcom Baba";
+
+    $scope.shortenUrl = function(){
+        $http.post('/shortenurl',{data:})
+    }
     // function initLoad(){
     // 	$scope.userList = [];
     // 	$http.get(APP_URL+'/user').then(function(response){
