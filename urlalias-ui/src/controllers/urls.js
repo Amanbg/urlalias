@@ -9,15 +9,18 @@ angular.module('urlalias.controllers').controller('urls', ['$scope', '$window', 
     //         initLoad();
     //     })
     // }
-
-    $scope.shortenUrl = function(){
-        $http.post('/shortenurl',{data:})
+    $scope.url = {
+        originalLink: null,
+        shortenedLink: null
     }
+    // $scope.shortenUrl = function() {
+    //     $http.post('/shortenurl', { data: })
+    // }
     // function initLoad(){
-    // 	$scope.userList = [];
-    // 	$http.get(APP_URL+'/user').then(function(response){
-    // 		$scope.userList = response.data;
-    // 	})
+    //  $scope.userList = [];
+    //  $http.get(APP_URL+'/user').then(function(response){
+    //      $scope.userList = response.data;
+    //  })
     // }
 
     // initLoad()
