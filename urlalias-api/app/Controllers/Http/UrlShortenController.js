@@ -22,9 +22,13 @@ class UrlShortenController {
   }
 
   async original({request, response}) {
-  	console.log('request.query===>', request.get())
   	const originallink = await Database.from('urlshortens').where('shortenedlink', request.get().code)
   	return originallink;
+  }
+
+  async shortenedUrlList({request, response}) {
+  	const urls = await Urlshorten.all()
+  	return urls;
   }
 }
 

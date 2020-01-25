@@ -18,4 +18,5 @@ const Route = use('Route')
 
 Route.on('/').render('welcome')
 Route.post('/shortenurl', 'UrlShortenController.shorten')
+Route.get('/shortenurl', 'UrlShortenController.shortenedUrlList')
 Route.get('/longurl', 'UrlShortenController.original')

@@ -12,11 +12,11 @@ angular.module('urlalias').config(['$stateProvider', '$urlRouterProvider', '$loc
         })
 
     $stateProvider
-        .state("home1", {
+        .state("original", {
             url: '/longurl/:code',
             views: {
                 "mainContent": {
-                    'templateUrl': "src/views/home1.html"
+                    'templateUrl': "src/views/redirecturl.html"
                 }
             }
         })
