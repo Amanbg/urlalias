@@ -20,20 +20,20 @@ angular.module('urlalias.controllers').controller('urls', ['$scope', '$window', 
     }
 
     $scope.url = {
-        shortenedLink: 'http://localhost:3000/#!/longurl?code=' + 'GAMTKR1' //response.data.shortenedLink
+        shortenedLink: 'GAMTKR1' //response.data.shortenedLink
     }
-    console.log('sssssss', $state)
-    //$scope.getOriginalUrl = function() {
-        if ($state.params.code !== undefined) {
-            $http.get(APP_URL + '/longurl', { code: $state.params.code }).then(function(response) {
-                console.log('longurl ==>', response);
-                $scope.url = {
-                    originalLink: response.data.originalLink
-                }
-            }, function(error) {
-                console.log(error)
-            })
-        }
+    // console.log('sssssss', $state)
+    // //$scope.getOriginalUrl = function() {
+    //     if ($state.params.code !== undefined) {
+    //         $http.get(APP_URL + '/longurl', { code: $state.params.code }).then(function(response) {
+    //             console.log('longurl ==>', response);
+    //             $scope.url = {
+    //                 originalLink: response.data.originalLink
+    //             }
+    //         }, function(error) {
+    //             console.log(error)
+    //         })
+    //     }
     //}
     // getOriginalUrl()
 

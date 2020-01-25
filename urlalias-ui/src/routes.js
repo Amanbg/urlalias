@@ -16,7 +16,7 @@ angular.module('urlalias').config(['$stateProvider', '$urlRouterProvider', '$loc
             url: '/longurl/:code',
             views: {
                 "mainContent": {
-                    'templateUrl': "src/views/home.html"
+                    'templateUrl': "src/views/home1.html"
                 }
             }
         })

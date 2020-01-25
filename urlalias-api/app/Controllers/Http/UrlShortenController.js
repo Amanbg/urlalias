@@ -23,7 +23,7 @@ class UrlShortenController {
 
   async original({request, response}) {
   	console.log('request.query===>', request.get())
-  	const originallink = await Database.from('urlshortens').where('shortenedlink', request.params.code)
+  	const originallink = await Database.from('urlshortens').where('shortenedlink', request.get().code)
   	return originallink;
   }
 }
