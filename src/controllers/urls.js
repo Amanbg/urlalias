@@ -20,7 +20,7 @@ angular.module('urlalias.controllers').controller('urls', ['$scope', '$window', 
         10: null,
         11: null,
     };
-    const APP_URL = 'http://localhost:3000'
+    const APP_URL = 'http://localhost:3333'
 
     $scope.shortenUrl = function(longurl) {
         $http.post(APP_URL + '/shortenurl', { data: longurl }).then(function(response) {

@@ -1,6 +1,6 @@
 angular.module('urlalias.controllers').controller('redirecturls', ['$scope', '$window', '$filter', '$state', '$timeout', '$rootScope', '$http', function($scope, $window, $filter, $state, $timeout, $rootScope, $http) {
 
-    const APP_URL = 'http://localhost:3000'
+    const APP_URL = 'http://localhost:3333'
 
     if ($state.params.path !== undefined) {
         var path = $state.params.path;
@@ -9,7 +9,7 @@ angular.module('urlalias.controllers').controller('redirecturls', ['$scope', '$w
             if (response.length == 0) {
                 $state.go('home');
             } else {
-                window.open(response.data[0].originallink, (_self))
+                window.open(response.data[0].originallink, '_self')
             }
 
         }, function(error) {
