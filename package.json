@@ -10,7 +10,7 @@
     "server": "nodemon server.js",
     "client": "npm start --prefix urlalias-api",
     "dev": "concurrently \"npm run server\" \"npm run client\"",
-    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix urlalias-api && npm install --dev --prefix urlalias-api"
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix urlalias-api && bower install && npm install --dev --prefix urlalias-api"
   },
   "repository": {
     "type": "git",
