@@ -11,24 +11,12 @@
     </div>
     <div class="row">
         <div class="col-md-10 form-group" style="margin-left: 11%;">
-            <a href="" ui-sref="original({code:url.shortenedLink})">{{url.shortenedLink}}</a>
+            <a href="{{url.shortenedLink}}" target="_blank">{{url.shortenedLink}}</a>
         </div>
     </div>
     <div class="row" style="margin-right:3%; margin-left:3%;">
         <div class="col-md-12 form-group">
             <div id="container" style="height: 400px"></div>
-<!--             <table class="table table-bordered">
-                <tbody>
-                    <tr>
-                        <th style="width:70%">Original Link</th>
-                        <th>Shortened Link</th>
-                    </tr>
-                    <tr ng-repeat="link in urlList">
-                        <td><span class="text-indent">{{link.originallink}}</span></td>
-                        <td><a href="" ui-sref="original({code:link.shortenedlink})">{{link.shortenedlink}}</a></td>
-                    </tr>
-                </tbody>
-            </table> -->
         </div>
     </div>
 </section>

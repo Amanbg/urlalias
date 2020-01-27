@@ -11,9 +11,18 @@ angular.module('urlalias').config(['$stateProvider', '$urlRouterProvider', '$loc
             }
         })
 
-    $stateProvider
-        .state("original", {
-            url: '/longurl/:code',
+    // $stateProvider
+    //     .state("original", {
+    //         url: '/longurl/:code',
+    //         views: {
+    //             "mainContent": {
+    //                 'templateUrl': "src/views/redirecturl.html"
+    //             }
+    //         }
+    //     })
+     $stateProvider
+        .state("otherwise", {
+            url: '*path',
             views: {
                 "mainContent": {
                     'templateUrl': "src/views/redirecturl.html"

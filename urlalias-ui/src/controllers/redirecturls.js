@@ -2,21 +2,18 @@ angular.module('urlalias.controllers').controller('redirecturls', ['$scope', '$w
 
     const APP_URL = 'http://localhost:3333';
 
-    if ($state.params.code !== undefined) {
-        $http.get(APP_URL + '/longurl', { params: { code: $state.params.code } }).then(function(response) {
-            $scope.openUrl(response.data[0].originallink);
-            $scope.url = {
-                originalLink: response.data[0].originallink
+    if ($state.params.path !== undefined) {
+        var path = $state.params.path;
+        var code = path.substr(1, path.length);
+        $http.get(APP_URL + '/longurl', { params: { code: code } }).then(function(response) {
+            if (response.length == 0) {
+                $state.go('home');
+            } else {
+                window.open(response.data[0].originallink, (_self))
             }
-            $state.go('home');
+
         }, function(error) {
             console.log(error)
         })
-    }
-
-
-    $scope.openUrl = function(link) {
-        var windowReference = window.open();
-        windowReference.location = link;
     }
 }])
