@@ -1,6 +1,6 @@
 angular.module('urlalias.controllers').controller('redirecturls', ['$scope', '$window', '$filter', '$state', '$timeout', '$rootScope', '$http', function($scope, $window, $filter, $state, $timeout, $rootScope, $http) {
 
-    const APP_URL = 'https://urlaliaser.herokuapp.com'
+    const APP_URL = 'http://localhost:3000'
 
     if ($state.params.path !== undefined) {
         var path = $state.params.path;

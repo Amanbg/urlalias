@@ -17,6 +17,7 @@
     "type": "git",
     "url": "urlalias"
   },
+  "proxy":"http://localhost:3333",
   "author": "Aman Babu Gautam",
   "license": "ISC",
   "dependencies": {
