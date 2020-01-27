@@ -10,7 +10,8 @@
     "server": "nodemon server.js",
     "client": "npm start --prefix urlalias-api",
     "dev": "concurrently \"npm run server\" \"npm run client\"",
-    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix urlalias-api && bower install && npm install --dev --prefix urlalias-api"
+    "postinstall": "./node_modules/bower/bin/bower install",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix urlalias-api && npm install --dev --prefix urlalias-api"
   },
   "repository": {
     "type": "git",
@@ -20,6 +21,7 @@
   "license": "ISC",
   "dependencies": {
     "concurrently": "^5.1.0",
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "bower":"1.8.8"
   }
 }
