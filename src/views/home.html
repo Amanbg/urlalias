@@ -1,0 +1,22 @@
+<section class="content" ng-controller="urls">
+    <div class="row margin">
+        <div class="col-md-12 form-group">
+            <div class="col-md-10 form-group" style="margin: 10% 10%;">
+                <input type="text" class="input-link form-control" auto-complete="off" name="originallink" placeholder="Your link" ng-model="url.originalLink">
+            </div>
+            <div class="col-md-2 form-group" style="float: right; margin-right: 10%">
+                <button type="submit" class="btn btn-primary btn-block shorten-btn" ng-click="shortenUrl(url.originalLink)" name="shortenbutton">Shorten URL</button>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-10 form-group" style="margin-left: 11%;">
+            <a href="{{url.shortenedLink}}" target="_blank">{{url.shortenedLink}}</a>
+        </div>
+    </div>
+    <div class="row" style="margin-right:3%; margin-left:3%;">
+        <div class="col-md-12 form-group">
+            <div id="container" style="height: 400px"></div>
+        </div>
+    </div>
+</section>

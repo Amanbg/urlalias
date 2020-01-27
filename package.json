@@ -1,0 +1,25 @@
+{
+  "name": "urlalias",
+  "version": "1.0.0",
+  "description": "A project to shorten long Url",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "client-install": "npm install --prefix urlalias-api",
+    "start": "node server.js",
+    "server": "nodemon server.js",
+    "client": "npm start --prefix urlalias-api",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix urlalias-api && npm install --dev --prefix urlalias-api"
+  },
+  "repository": {
+    "type": "git",
+    "url": "urlalias"
+  },
+  "author": "Aman Babu Gautam",
+  "license": "ISC",
+  "dependencies": {
+    "concurrently": "^5.1.0",
+    "express": "^4.17.1"
+  }
+}

@@ -1,0 +1,31 @@
+body {
+    font-size: 13px;
+}
+
+.input-link {
+    width: 72%;
+    height: 60px;
+    background: #fff;
+    border: 1px solid #d3d4d7;
+    border-radius: 8px 8px 8px 8px;
+    display: inline-block;
+    margin-right: 20px;
+    margin-bottom: 0;
+    float: left;
+    font-size: 20px;
+    color: #36383b;
+    padding: 0 20px;
+}
+
+.shorten-btn {
+	font-size: 20px;
+    height: 60px;
+    vertical-align: bottom;
+    margin-bottom: 0;
+    background: #2a289c;
+    border-color: #2a289c;
+    min-width: 25%;
+    float: right;
+    outline: none;
+    position: relative;
+}
