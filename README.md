@@ -3,9 +3,7 @@
 
 * open terminal
 * clone github repo 
-	```
-	git clone https://github.com/Amanbg/urlalias.git
-	```
+	``` git clone https://github.com/Amanbg/urlalias.git ```
 * go to ```urlalias``` directory (frontend server)
 	* run ```npm install```
 	* run ```bower install```
@@ -26,10 +24,10 @@
 	* run ```adonis serve --dev```
 
 then open browser
-* type localhost:3000/#!/
+* type ```localhost:3000/#!/```
 
-###Application Functionality###
+### Application Functionality ###
 
 * Get Url Shortened
-	* In the input field, paste long url and hit shorten url button
-	* you will get a shortcode, upon clicking on that shortcode, you will be redirected to long url
+	* In the input field, paste long url and hit **shorten url** button
+	* you will get a shortcode, upon clicking on that shortcode, you will be redirected to original long url
